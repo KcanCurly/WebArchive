@@ -1,5 +1,7 @@
 # WebArchive Subdomain Extractor
 
+![Sample Output](sample.png)
+
 [Python 3.7+](https://www.python.org/downloads/)
 [License: GPL](LICENSE)
 [Status: Active]
@@ -244,14 +246,4 @@ This project is licensed under the GNU General Public License (GPL) - see the [L
 
 Developed by Cuma KURT  
 Email: cumakurt [at] gmail [dot] com  
-[LinkedIn](https://www.linkedin.com/in/cuma-kurt-34414917/)
-
-## Support
-
-- Issues: [GitHub Issues](https://github.com/yourusername/webarchive-subdomain-extractor/issues)
-- Discussions: [GitHub Discussions](https://github.com/yourusername/webarchive-subdomain-extractor/discussions)
-- Email: support@example.com
-
----
-
-Made for the security research community 
+[LinkedIn](https://www.linkedin.com/in/cuma-kurt-34414917/) 
