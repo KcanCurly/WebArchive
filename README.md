@@ -209,14 +209,7 @@ python web.archive.py <domain> --min-length 8 --max-length 25
 - **Permission Errors:** Ensure write permissions to the output and logs directories.
 - **Memory Issues:** Use `--max-results` to limit results for large domains.
 
-## Contributing
 
-We welcome contributions! Please:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add your feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
 
 ## FAQ
 
