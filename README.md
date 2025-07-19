@@ -71,7 +71,7 @@ tqdm==4.66.1
 ### Basic Usage
 
 ```bash
-python WebArchive <domain>
+python WebArchive.py <domain>
 ```
 
 ### Advanced Usage
