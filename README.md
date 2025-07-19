@@ -48,8 +48,8 @@ python web.archive.py <domain>
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/webarchive-subdomain-extractor.git
-cd webarchive-subdomain-extractor
+https://github.com/cumakurt/WebArchive.git
+cd WebArchive
 
 # Install required packages
 pip install -r requirements.txt
