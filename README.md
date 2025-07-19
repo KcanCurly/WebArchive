@@ -9,7 +9,7 @@
 ## Usage Example
 
 ```bash
-python web.archive.py <domain>
+python WebArchive.py <domain>
 ```
 
 ## Features
@@ -71,15 +71,15 @@ tqdm==4.66.1
 ### Basic Usage
 
 ```bash
-python web.archive.py <domain>
+python WebArchive <domain>
 ```
 
 ### Advanced Usage
 
 ```bash
-python web.archive.py <domain> --format txt json csv --output-dir results
-python web.archive.py <domain> --filter "test|dev" --exclude-words admin,test
-python web.archive.py <domain> --verbose
+python WebArchive.py <domain> --format txt json csv --output-dir results
+python WebArchive.py <domain> --filter "test|dev" --exclude-words admin,test
+python WebArchive.py <domain> --verbose
 ```
 
 ## Usage Examples
@@ -87,35 +87,35 @@ python web.archive.py <domain> --verbose
 ### 1. Basic Subdomain Extraction
 
 ```bash
-python web.archive.py <domain>
+python WebArchive.py <domain>
 ```
 
 ### 2. Multiple Output Formats
 
 ```bash
-python web.archive.py <domain> --format txt json csv --output-dir results
+python WebArchive.py <domain> --format txt json csv --output-dir results
 ```
 
 ### 3. Advanced Filtering
 
 ```bash
-python web.archive.py <domain> --filter "test|dev"
-python web.archive.py <domain> --exclude-words admin,test,staging
-python web.archive.py <domain> --min-length 10 --max-length 30
-python web.archive.py <domain> --filter "api|service" --exclude-words admin --min-length 8
+python WebArchive.py <domain> --filter "test|dev"
+python WebArchive.py <domain> --exclude-words admin,test,staging
+python WebArchive.py <domain> --min-length 10 --max-length 30
+python WebArchive.py <domain> --filter "api|service" --exclude-words admin --min-length 8
 ```
 
 ### 4. Verbose Output with Statistics
 
 ```bash
-python web.archive.py <domain> --verbose
+python WebArchive.py <domain> --verbose
 ```
 
 ### 5. Custom Configuration
 
 ```bash
-python web.archive.py <domain> --config custom_config.ini
-python web.archive.py <domain> --log-level DEBUG
+python WebArchive.py <domain> --config custom_config.ini
+python WebArchive.py <domain> --log-level DEBUG
 ```
 
 ## Configuration
@@ -177,21 +177,21 @@ CSV file with index and subdomain columns.
 
 ### Regex Filtering
 ```bash
-python web.archive.py <domain> --filter "test|dev|staging"
-python web.archive.py <domain> --filter "api|service|backend"
+python WebArchive.py <domain> --filter "test|dev|staging"
+python WebArchive.py <domain> --filter "api|service|backend"
 ```
 
 ### Keyword Exclusion
 ```bash
-python web.archive.py <domain> --exclude-words admin,test,dev
-python web.archive.py <domain> --exclude-words staging,beta,old
+python WebArchive.py <domain> --exclude-words admin,test,dev
+python WebArchive.py <domain> --exclude-words staging,beta,old
 ```
 
 ### Length Filtering
 ```bash
-python web.archive.py <domain> --min-length 8
-python web.archive.py <domain> --max-length 25
-python web.archive.py <domain> --min-length 8 --max-length 25
+python WebArchive.py <domain> --min-length 8
+python WebArchive.py <domain> --max-length 25
+python WebArchive.py <domain> --min-length 8 --max-length 25
 ```
 
 ## Advanced Features
