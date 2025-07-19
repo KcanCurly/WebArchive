@@ -34,7 +34,6 @@ python web.archive.py <domain>
 - [Filtering Options](#filtering-options)
 - [Advanced Features](#advanced-features)
 - [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
 - [FAQ](#faq)
 - [License](#license)
 
