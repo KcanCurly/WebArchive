@@ -323,6 +323,10 @@ def dns_check_domain(subdomains):
             answers = resolver.resolve(domain, "A")
             if answers:
                 valid_subdomains.append(domain)
+            else:
+                answers = resolver.resolve(domain, "CNAME")
+                if answers:
+                    valid_subdomains.append(domain)
         except: pass
     return valid_subdomains
 
