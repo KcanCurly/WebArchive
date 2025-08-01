@@ -318,13 +318,15 @@ def save_raw_data(domain: str, urls: List[str], output_dir: str) -> str:
 def dns_check_domain(subdomains):
     valid_subdomains = []
     resolver = dns.resolver.Resolver()
-    resolver.lifetime = 20
+    resolver.lifetime = 10
     resolver.nameservers = ["8.8.8.8"]
     for domain in subdomains:
+        try:
 
-        answers = resolver.resolve(domain, "A")
-        if answers:
-            valid_subdomains.append(domain)
+            answers = resolver.resolve(domain, "A")
+            if answers:
+                valid_subdomains.append(domain)
+        except: pass
     return valid_subdomains
 
 
