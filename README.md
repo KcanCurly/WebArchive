@@ -44,6 +44,12 @@ python WebArchive.py <domain>
 - Python 3.7 or higher
 - pip package manager
 
+### Pipx
+
+```bash
+pipx install "git+https://github.com/cumakurt/WebArchive"
+```
+
 ### Install Dependencies
 
 ```bash
