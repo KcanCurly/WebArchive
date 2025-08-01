@@ -430,6 +430,7 @@ FEATURES:
                        help='Comma-separated words to exclude from subdomains (e.g., admin,test,dev)')
     
     parser.add_argument('--valid-only', 
+                       action='store_true', 
                        help='Only show valid subdomains (Subdomain is considered valid if it as A or CNAME record)')
     
     parser.add_argument('--min-length', 
