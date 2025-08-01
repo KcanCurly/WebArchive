@@ -39,6 +39,8 @@ import requests
 from prettytable import PrettyTable
 from termcolor import colored
 from tqdm import tqdm
+import dns.resolver
+
 
 # Global logger
 logger = None
@@ -313,6 +315,15 @@ def save_raw_data(domain: str, urls: List[str], output_dir: str) -> str:
         logger.error(f"Failed to save raw data: {e}")
         raise
 
+def dns_check_domain(subdomains):
+    valid_subdomains = []
+    for domain in subdomains:
+        answers = dns.resolver.resolve(domain, "A")
+        if answers:
+            valid_subdomains.append(domain)
+    return valid_subdomains
+
+
 def display_results(domain: str, subdomains: List[str], saved_files: Dict[str, str], 
                    raw_file: str, verbose: bool = False):
     """Display results with enhanced formatting."""
@@ -482,6 +493,10 @@ def main():
         
         # Extract subdomains
         subdomains = extract_subdomains(urls)
+
+        # Dns check subdomains
+        subdomains = dns_check_domain(subdomains)
+        
         if not subdomains:
             print(colored("[WARNING] No subdomains could be extracted.", "yellow"))
             sys.exit(0)
@@ -491,6 +506,8 @@ def main():
             original_count = len(subdomains)
             subdomains = filter_subdomains(subdomains, filters)
             logger.info(f"Filtering reduced subdomains from {original_count} to {len(subdomains)}")
+
+        
         
         # Save results
         saved_files = save_results(domain, subdomains, args.output_dir, args.format)
