@@ -16,7 +16,7 @@ setup(
     python_requires=">=3.10",
     entry_points={
         "console_scripts": [
-            "webarchive.py=src.webarchive:main",
+            "webarchive.py=src.WebArchive:main",
         ],
     },
 )
