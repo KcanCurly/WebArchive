@@ -318,7 +318,9 @@ def save_raw_data(domain: str, urls: List[str], output_dir: str) -> str:
 def dns_check_domain(subdomains):
     valid_subdomains = []
     for domain in subdomains:
-        answers = dns.resolver.resolve(domain, "A")
+        resolver = dns.resolver.Resolver()
+        resolver.nameservers = ["8.8.8.8"]
+        answers = resolver.resolve(domain, "A")
         if answers:
             valid_subdomains.append(domain)
     return valid_subdomains
@@ -496,7 +498,7 @@ def main():
 
         # Dns check subdomains
         subdomains = dns_check_domain(subdomains)
-        
+
         if not subdomains:
             print(colored("[WARNING] No subdomains could be extracted.", "yellow"))
             sys.exit(0)
