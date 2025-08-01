@@ -13,10 +13,10 @@ setup(
     url="https://github.com/cumakurt/WebArchive",
     packages=find_packages(),
     install_requires=requirements,
-    python_requires=">=3.12",
+    python_requires=">=3.10",
     entry_points={
         "console_scripts": [
-            "webarchive.py=webarchive:main",
+            "webarchive.py=WebArchive:main",
         ],
     },
 )
