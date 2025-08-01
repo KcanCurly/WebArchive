@@ -318,7 +318,7 @@ def save_raw_data(domain: str, urls: List[str], output_dir: str) -> str:
 def dns_check_domain(subdomains):
     valid_subdomains = []
     resolver = dns.resolver.Resolver()
-    resolver.lifetime = 10
+    resolver.lifetime = 20
     resolver.nameservers = ["8.8.8.8"]
     for domain in subdomains:
 
