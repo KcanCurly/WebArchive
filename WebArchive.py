@@ -429,6 +429,9 @@ FEATURES:
     parser.add_argument('--exclude-words', 
                        help='Comma-separated words to exclude from subdomains (e.g., admin,test,dev)')
     
+    parser.add_argument('--valid-only', 
+                       help='Only show valid subdomains (Subdomain is considered valid if it as A or CNAME record)')
+    
     parser.add_argument('--min-length', 
                        type=int, 
                        help='Minimum subdomain length (e.g., 10)')
@@ -502,7 +505,8 @@ def main():
         subdomains = extract_subdomains(urls)
 
         # Dns check subdomains
-        subdomains = dns_check_domain(subdomains)
+        if args.valid_only:
+            subdomains = dns_check_domain(subdomains)
 
         if not subdomains:
             print(colored("[WARNING] No subdomains could be extracted.", "yellow"))
